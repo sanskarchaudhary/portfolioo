@@ -628,7 +628,7 @@
 
                     <img
                       src="./assets/images/project-1.png"
-                      alt="finance"
+                      alt="Calculator"
                       loading="lazy"
                     />
                   </figure>
@@ -1084,7 +1084,11 @@
                 data-form-input
               ></textarea>
 
-              <button class="form-btn" type="submit" disabled data-form-btn>
+              <button
+                type="button"
+                class="form-btn"
+                onclick="location.href='mailto:info@sanskarchaudhary.com.np?subject=Message from Website&body=Name:%20' + document.querySelector('input[name=&quot;fullname&quot;]').value + '%0AEmail:%20' + document.querySelector('input[name=&quot;email&quot;]').value + '%0AMessage:%20' + document.querySelector('textarea[name=&quot;message&quot;]').value"
+              >
                 <ion-icon name="paper-plane"></ion-icon>
                 <span>Send Message</span>
               </button>
