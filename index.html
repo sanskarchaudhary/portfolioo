@@ -1004,7 +1004,7 @@
         - #CONTACT
       -->
 
-        <article class="contact" data-page="contact">
+          <article class="contact" data-page="contact">
           <header>
             <h2 class="h2 article-title">Contact</h2>
           </header>
@@ -1052,17 +1052,26 @@
                 data-form-input
               ></textarea>
 
-              <button
-                type="button"
-                class="form-btn"
-                onclick="location.href='mailto:info@sanskarchaudhary.com.np?subject=Message from Website&body=Name:%20' + document.querySelector('input[name=&quot;fullname&quot;]').value + '%0AEmail:%20' + document.querySelector('input[name=&quot;email&quot;]').value + '%0AMessage:%20' + document.querySelector('textarea[name=&quot;message&quot;]').value"
-              >
+              <button type="button" class="form-btn" onclick="sendEmail()">
                 <ion-icon name="paper-plane"></ion-icon>
                 <span>Send Message</span>
               </button>
             </form>
           </section>
         </article>
+        
+        <script>
+          function sendEmail() {
+            const fullname = document.querySelector('input[name="fullname"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+        
+            const mailtoLink = `mailto:sanskarc55@gmail.com?subject=Message from sanskarchaudhary.com.np &body=Name: ${fullname}%0AEmail: ${email}%0AMessage: ${message}`;
+            const a = document.createElement('a');
+            a.href = mailtoLink;
+            a.click();
+          }
+        </script>
       </div>
     </main>
     <!--
